@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS: Functions Assignment</title>
+</head>
+<body>
+    <h1>Javascript Functions Assignment</h1>
+    <script>
+        //Write a function called add7 that takes one number and returns that number + 7.
+        //Write a function called multiply that takes 2 numbers and returns their product.
+        //Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+        //Write a function called lastLetter that takes a string and returns the very last letter of that string:
+        //lastLetter("abcd") should return "d"
+
+        //Initialization/Declaration of variables
+        let a = +(prompt("What's the 1st number? "));
+        let b = +(prompt("What's the 2nd number? "));
+        let c = prompt("What's the 'string' variable? ");
+
+        //creation of Function Expression or Function Declarations
+        function add7(){
+            var res = a;
+            console.log(res);
+            return res;
+        }
+        function multiply(){
+            var res = a*b;
+            console.log(res);
+            return res;
+        }
+        function capitalize(){
+            //use toLowerCase() and toUpperCase() and indexing
+            var res = c.trim().at(0).toUpperCase() + c.trim().slice(1,).toLowerCase();
+            console.log(res);
+            return res;
+        }
+        function lastLetter(){
+            var res = c.trim().at(-1);
+            console.log(res);
+            return res;
+        }
+
+        //Runtime, Output, Result
+        alert(
+            `Results:
+            Added: ${add7()}
+            Multiplied: ${multiply()}
+            First Letter Capitalized: ${capitalize()}
+            last letter returned: ${lastLetter()}`
+        )
+        console.log(`typeof a,b,c respectively: ${typeof a}, ${typeof b}, ${typeof c}`)
+    </script>
+</body>
+</html>
